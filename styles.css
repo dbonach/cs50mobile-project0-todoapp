@@ -48,6 +48,15 @@ ul {
   overflow-y: auto;
 }
 
+.todo-list > li {
+  display: flex;
+  align-items: center;
+}
+
+li > label {
+  margin-left: 0.25rem;
+}
+
 .todo-delete {
   margin: 10px;
 }
@@ -64,3 +73,23 @@ ul {
 .todo-container:first-of-type {
   border-top: 1px solid #333;
 }
+
+.delete {
+  color: red;
+  font-family: 'Indie Flower', cursive;
+  border: none;
+  background-color: white;
+  line-height: 1rem;
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.delete:hover {
+  background: #eee;
+  text-shadow: 0px 0px 0.75rem #000;
+  /* cursor: pointer; */
+}
+
+/* .button-box {
+  height: 50%;
+} */
