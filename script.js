@@ -20,7 +20,6 @@ function newTodo() {
   let input = document.createElement("input");
   input.type = "checkbox"
   input.setAttribute("onclick", "check(event.target)");
-  console.log(input);
   new_item.appendChild(input);
 
   let label = document.createElement("label");
@@ -32,10 +31,8 @@ function newTodo() {
   button.setAttribute("class", "delete");
   button.setAttribute("onclick", "removeItem(event)");
   new_item.appendChild(button);
-  console.log(new_item)
 
   list.appendChild(new_item);
-
 
   itemCount += 1;
   uncheckedCount += 1;
@@ -44,7 +41,6 @@ function newTodo() {
 }
 
 function check(target) {
-
   if (target.checked) {
     uncheckedCount -= 1;
   } else {
@@ -54,11 +50,9 @@ function check(target) {
 }
 
 function removeItem(target) {
-
   target.path[1].remove();
   itemCount -= 1;
   uncheckedCount -= 1;
   itemCountSpan.innerHTML = itemCount;
   uncheckedCountSpan.innerHTML = uncheckedCount;
-
 }
