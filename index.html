@@ -12,17 +12,15 @@
   <div class="container center">
     <h1 class="center title">My TODO App</h1>
     <div class="flow-right controls">
-      <span>Item count: <span id="item-count">1</span></span>
-      <span>Unchecked count: <span id="unchecked-count">1</span></span>
+      <span>Item count: <span id="item-count">0</span></span>
+      <span>Unchecked count: <span id="unchecked-count">0</span></span>
     </div>
     <button class="button center" onClick="newTodo()">New TODO</button>
     <ul id="todo-list" class="todo-list">
-
-      <li>
-        <input type="checkbox" name="teste" id="" onClick="check(event.target)">
-        <label for="">Clean the house</label>
-        <button class="delete" onClick="removeItem(event)">x</button>
-      </li>
+      <!-- The li's tags were not separated in individual lines because it
+      generate more nodes in the li element when parsing it in the scrip. -->
+      <!-- <li class="todo-text"><input type="checkbox" onClick="check(event)"><label>Clean the house</label><button
+          class="delete" onClick="removeItem(event)">x</button></li> -->
 
     </ul>
   </div>
